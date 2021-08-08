@@ -1,0 +1,53 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File With env",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "python": "/Users/houri/opt/anaconda3/bin/python"
+    },
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": ["--env", "prd", "--resource", "rds", "--host_filter", "domain", "--local_port", "54325"]
+    },
+    {
+      "name": "Python: csv importer",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": ["--events_csv", "tests/data/integration/event_insights.csv", "--campaigns_csv", "tests/data/integration/campaigns.csv", "--sales_csv", "tests/data/integration/sales.csv"]
+    },
+    {
+      "name": "Python: Flask",
+      "type": "python",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "app/app.py",
+        "FLASK_ENV": "development",
+        "FLASK_DEBUG": "0"
+      },
+      "args": ["run", "--no-debugger", "--no-reload"],
+      "justMyCode": false
+    },
+    {
+      "name": "Debug Tests",
+      "type": "python",
+      "request": "test",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
